@@ -12,7 +12,6 @@ export const Search = () => {
 
     const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
         setValue(event.target.value);
-        //updateSearchValue(event.target.value);
     };
     return (
         <div className={styles.upper_label}>

@@ -3,10 +3,8 @@ import styles from "../styles/header.module.scss";
 import plus from "../assets/img/plus.svg";
 import trash from "../assets/img/trash.svg";
 import edit from "../assets/img/edit.png";
-import {ChangeEvent, useRef, useState} from "react";
 import {Search} from "./Search";
 export const Header = () => {
-
 
     return (
         <div className={styles.header_main}>

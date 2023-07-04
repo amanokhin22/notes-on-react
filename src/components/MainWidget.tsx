@@ -2,6 +2,7 @@ import styles from "../styles/mainWidget.module.scss";
 import {Header} from "./Header";
 import {NotesList} from "./NotesList";
 import {WorkSpace} from "./WorkSpace";
+
 export const MainWidget = () => {
     return (
         <div className={styles.global}>
