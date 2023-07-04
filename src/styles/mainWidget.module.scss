@@ -1,0 +1,11 @@
+.global {
+  margin: 0;
+  position: relative;
+}
+
+.notes_wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+}
