@@ -4,13 +4,23 @@ import plus from "../assets/img/plus.svg";
 import trash from "../assets/img/trash.svg";
 import edit from "../assets/img/edit.png";
 import {Search} from "./Search";
-export const Header = () => {
+import {FC} from "react";
+
+interface HeaderProps {
+    onCreateItem: (title: string, description: string) => void;
+}
+
+export const Header: FC<HeaderProps> = ({onCreateItem}) => {
+    const handlePlusButtonClick = () => {
+        onCreateItem('', '');
+    };
 
     return (
         <div className={styles.header_main}>
             <div className={styles.header_container}>
                 <div className={styles.left_buttons}>
-                    <button className={styles.upper_btn}>
+                    <button onClick={handlePlusButtonClick}
+                            className={styles.upper_btn}>
                         <span>
                             <img src={plus} alt="plus"/>
                         </span>

@@ -1,16 +1,22 @@
-import styles from "../styles/note.module.scss";
+import React, {FC} from 'react';
+import styles from '../styles/note.module.scss';
 
-export const Note = () => {
+interface NoteProps {
+    title: string;
+    description: string;
+    onActiveNote: () => void
+}
+
+export const Note: FC<NoteProps> = ({title, description, onActiveNote}) => {
     return (
-        <div className={styles.note_container}>
-            <div className={styles.note}><p>Note</p>
+        <div onClick={onActiveNote} className={styles.note_container}>
+            <div className={styles.note}>
+                <p>{title}</p>
                 <div className={styles.note_details}>
-                    <span>time</span>
-                    <p>
-                        information
-                    </p>
+                    <span>{new Date().toLocaleString()}</span>
+                    <p>{description}</p>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
