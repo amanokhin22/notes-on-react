@@ -9,10 +9,11 @@ import {Item} from "./MainWidget";
 export interface HeaderProps {
     onCreateItem: (title: string, description: string) => void;
     onRemoveItem: () => void;
+    onEditItem: () => void;
     activeItem: Item | null;
 }
 
-export const Header: FC<HeaderProps> = ({onCreateItem, onRemoveItem, activeItem}) => {
+export const Header: FC<HeaderProps> = ({onCreateItem, onRemoveItem, activeItem, onEditItem}) => {
 
     const handlePlusButtonClick = () => {
         onCreateItem('', '');
@@ -32,7 +33,7 @@ export const Header: FC<HeaderProps> = ({onCreateItem, onRemoveItem, activeItem}
               <img src={trash} alt="trash"/>
             </span>
                     </button>
-                    <button disabled className={styles.upper_btn}>
+                    <button onClick={onEditItem} disabled={!activeItem} className={styles.upper_btn}>
             <span>
               <img width="25px" height="25px" src={edit} alt="edit button"/>
             </span>

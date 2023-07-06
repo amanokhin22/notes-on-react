@@ -4,7 +4,7 @@ import styles from '../styles/workSpace.module.scss';
 interface WorkSpaceProps {
     onSaveItem: (title: string, description: string) => void,
     title: string,
-    description: string
+    description: string,
 }
 
 export const WorkSpace: FC<WorkSpaceProps> = ({onSaveItem, title, description}) => {
