@@ -1,16 +1,9 @@
 import React, {FC} from 'react';
 import styles from '../styles/note.module.scss';
-
-export interface NoteProps {
-    title: string;
-    description: string;
-    date: Date;
-    active: boolean;
-    onActiveNote: () => void
-}
+import {NoteProps} from "../types/NoteTypes";
 
 export const Note: FC<NoteProps> = ({title, description, date, active, onActiveNote}) => {
-    const formattedDate = date.toLocaleString();
+    const formattedDate = date ? date.toLocaleString([], {hour: '2-digit', minute: '2-digit'}) : '';
 
     const noteClassName = active ? `${styles.note} ${styles.active}` : styles.note;
 
@@ -18,7 +11,7 @@ export const Note: FC<NoteProps> = ({title, description, date, active, onActiveN
         <div onClick={onActiveNote} className={noteClassName}>
             <p>{title}</p>
             <div className={styles.note_details}>
-                <span>{formattedDate}</span>
+                {formattedDate && <span>{formattedDate}</span>}
                 <p>{description}</p>
             </div>
         </div>

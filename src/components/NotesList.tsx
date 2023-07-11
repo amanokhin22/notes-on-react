@@ -1,24 +1,7 @@
 import React, {FC} from 'react';
 import styles from '../styles/notesList.module.scss';
 import {Note} from './Note';
-
-interface NotesListProps {
-    notes: {
-        title: string,
-        description: string;
-        date: Date;
-    }[];
-    onActiveNote: (note: {
-        title: string,
-        description: string;
-        date: Date;
-    }) => void;
-    activeNote: {
-        title: string;
-        description: string;
-        date: Date;
-    } | null;
-}
+import {NotesListProps} from "../types/NoteTypes";
 
 export const NotesList: FC<NotesListProps> = ({notes, onActiveNote, activeNote}) => {
 

@@ -1,11 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 import styles from '../styles/workSpace.module.scss';
-
-interface WorkSpaceProps {
-    onSaveItem: (title: string, description: string) => void,
-    title: string,
-    description: string,
-}
+import {WorkSpaceProps} from "../types/NoteTypes";
 
 export const WorkSpace: FC<WorkSpaceProps> = ({onSaveItem, title, description}) => {
     const [newTitle, setNewTitle] = useState('');
@@ -57,9 +52,7 @@ export const WorkSpace: FC<WorkSpaceProps> = ({onSaveItem, title, description}) 
                     value={newDescription}
                     onChange={(e) => setNewDescription(e.target.value)}
                 />
-                <div className={styles.button_wrapper}>
-                    <button className={styles.btn_save} onClick={handleSaveButtonClick}>Save</button>
-                </div>
+                <button className={styles.btn_save} onClick={handleSaveButtonClick}>Save</button>
             </div>
         </div>
     );

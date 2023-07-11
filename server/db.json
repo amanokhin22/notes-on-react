@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Some new note",
+      "description": "Abracadabra",
+      "date": "11.07.2023"
+    },
+    {
+      "id": 2,
+      "title": "Some new second note",
+      "description": "Sim sim - opening",
+      "date": "11.07.2023"
+    },
+    {
+      "id": 5,
+      "title": "555ffefef",
+      "description": "5555fesfesfse",
+      "date": "2023-07-11T12:37:18.638Z"
+    },
+    {
+      "id": 6,
+      "title": "5555",
+      "description": "5555555",
+      "date": "2023-07-11T12:37:30.190Z"
+    }
+  ]
+}

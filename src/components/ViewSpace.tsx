@@ -1,13 +1,8 @@
 import React, {FC} from 'react';
 import styles from '../styles/workSpace.module.scss';
+import {ViewSpaceProps} from "../types/NoteTypes";
 
-interface WorkSpaceProps {
-    title: string;
-    description: string;
-    date: Date;
-}
-
-export const ViewSpace: FC<WorkSpaceProps> = ({ title, description, date}) => {
+export const ViewSpace: FC<ViewSpaceProps> = ({ title, description, date}) => {
 
     return (
         <div className={styles.container_work_space}>
@@ -15,7 +10,7 @@ export const ViewSpace: FC<WorkSpaceProps> = ({ title, description, date}) => {
 
             <div className={styles.input_wrapper}>
                 <h1>{title}</h1>
-                <div>{description}</div>
+                <div>{description} </div>
             </div>
         </div>
     );

@@ -4,14 +4,7 @@ import trash from "../assets/img/trash.svg";
 import edit from "../assets/img/edit.png";
 import {Search} from "./Search";
 import {FC} from "react";
-import {Item} from "./MainWidget";
-
-export interface HeaderProps {
-    onCreateItem: (title: string, description: string) => void;
-    onRemoveItem: () => void;
-    onEditItem: () => void;
-    activeItem: Item | null;
-}
+import {HeaderProps} from "../types/NoteTypes";
 
 export const Header: FC<HeaderProps> = ({onCreateItem, onRemoveItem, activeItem, onEditItem}) => {
 
