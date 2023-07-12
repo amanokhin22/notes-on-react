@@ -1,17 +1,23 @@
 import styles from "../styles/header.module.scss";
-import {ChangeEvent, useRef, useState} from "react";
+import {ChangeEvent, useRef, useState, FC} from "react";
+import {SearchType} from "../types/NoteTypes";
 
-export const Search = () => {
+
+
+export const Search:FC<SearchType> = ({onSearch, onClearSearch}) => {
     const [value, setValue] = useState<string>('');
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onClickClear = () => {
         setValue('');
-        inputRef.current?.focus()
+        onClearSearch();
+        inputRef.current?.focus();
     }
 
     const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value);
+        const searchItem = event.target.value;
+        setValue(searchItem);
+        onSearch(searchItem);
     };
     return (
         <div className={styles.upper_label}>

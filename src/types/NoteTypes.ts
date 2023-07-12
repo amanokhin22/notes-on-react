@@ -26,10 +26,12 @@ export interface NoteProps {
 }
 
 export interface HeaderProps {
-    onCreateItem: (title: string, description: string) => void;
+    onCreateItem: (newTitle: string, newDescription: string) => void;
     onRemoveItem: () => void;
-    onEditItem: () => void;
     activeItem: NoteTypes | null;
+    onEditItem: () => void;
+    onSearch: (term: string) => void;
+    onClearSearch: () => void;
 }
 
 export interface ViewSpaceProps {
@@ -44,4 +46,8 @@ export interface WorkSpaceProps {
     description: string;
 }
 
+export interface SearchType {
+    onSearch: (searchTerm: string) => void;
+    onClearSearch: () => void;
+}
 

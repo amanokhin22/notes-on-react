@@ -6,7 +6,7 @@ import {Search} from "./Search";
 import {FC} from "react";
 import {HeaderProps} from "../types/NoteTypes";
 
-export const Header: FC<HeaderProps> = ({onCreateItem, onRemoveItem, activeItem, onEditItem}) => {
+export const Header: FC<HeaderProps> = ({onCreateItem, onClearSearch, onRemoveItem, activeItem, onEditItem, onSearch}) => {
 
     const handlePlusButtonClick = () => {
         onCreateItem('', '');
@@ -32,7 +32,7 @@ export const Header: FC<HeaderProps> = ({onCreateItem, onRemoveItem, activeItem,
             </span>
                     </button>
                 </div>
-                <Search/>
+                <Search onSearch={onSearch} onClearSearch={onClearSearch}/>
             </div>
         </div>
     );

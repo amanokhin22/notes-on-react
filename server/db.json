@@ -14,15 +14,15 @@
     },
     {
       "id": 5,
-      "title": "555ffefef",
-      "description": "5555fesfesfse",
-      "date": "2023-07-11T12:37:18.638Z"
+      "title": "It`s third note in my list",
+      "description": "We have an array of notes in my db.json - file. with axios we could get these array, create new notes and put them to the that array, delete notes and edit them",
+      "date": "2023-07-11T13:08:30.853Z"
     },
     {
       "id": 6,
-      "title": "5555",
-      "description": "5555555",
-      "date": "2023-07-11T12:37:30.190Z"
+      "title": "fourth title",
+      "description": "text",
+      "date": "2023-07-12T10:03:09.518Z"
     }
   ]
 }
