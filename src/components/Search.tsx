@@ -2,9 +2,7 @@ import styles from "../styles/header.module.scss";
 import {ChangeEvent, useRef, useState, FC} from "react";
 import {SearchType} from "../types/NoteTypes";
 
-
-
-export const Search:FC<SearchType> = ({onSearch, onClearSearch}) => {
+export const Search: FC<SearchType> = ({onSearch, onClearSearch}) => {
     const [value, setValue] = useState<string>('');
     const inputRef = useRef<HTMLInputElement>(null);
 

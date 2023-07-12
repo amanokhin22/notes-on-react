@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import styles from '../styles/mainWidget.module.scss';
 import {Header} from './Header';
 import {NotesList} from './NotesList';
@@ -6,12 +6,13 @@ import {WorkSpace} from './WorkSpace';
 import {ViewSpace} from "./ViewSpace";
 import {apiNote} from "../api/apiNotes";
 import {CreateItem, NoteTypes} from "../types/NoteTypes";
+import {useSearch} from "../hooks/useSearch";
 
 export const MainWidget = () => {
     const [items, setItems] = useState<NoteTypes[]>([]);
     const [activeItem, setActiveItem] = useState<NoteTypes | null>(null);
     const [editMod, setEditMod] = useState<boolean>(false);
-    const [searchTerm, setSearchTerm] = useState<string>('');
+    const {filteredItems, handleClearSearch, handleSearch} = useSearch(items)
 
     const handleCreateItem = async (newTitle: string, newDescription: string) => {
         const newItem: CreateItem = {
@@ -68,25 +69,6 @@ export const MainWidget = () => {
         };
         fetchData();
     }, []);
-
-    const handleSearch = useCallback((term: string) => {
-        setSearchTerm(term);
-    }, []);
-
-    const handleClearSearch = useCallback(() => {
-        setSearchTerm('');
-    },[])
-
-    const filteredItems = useMemo(() => {
-        if (searchTerm) {
-            return items.filter((item) =>
-                item.title.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-        } else {
-            return items;
-        }
-
-    }, [items, searchTerm])
 
     return (
         <div className={styles.global}>

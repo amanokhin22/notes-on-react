@@ -12,7 +12,6 @@ const axiosInstance = axios.create({
 const mapItem = (item: NoteTypes) => {
     return {...item, date: new Date(item.date)}
 }
-
 export const apiNote = {
     async getAll() {
         const res = await axiosInstance.get<NoteTypes[]>('/notes');

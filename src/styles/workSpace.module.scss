@@ -13,10 +13,11 @@
   align-self: center;
   padding-top: 20px;
 }
+
 .container_work_space div {
-  white-space: nowrap;
+  //white-space: nowrap;
   overflow-x: auto;
-  text-overflow: ellipsis;
+  //text-overflow: ellipsis;
 }
 
 .input_wrapper {

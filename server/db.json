@@ -15,14 +15,20 @@
     {
       "id": 5,
       "title": "It`s third note in my list",
-      "description": "We have an array of notes in my db.json - file. with axios we could get these array, create new notes and put them to the that array, delete notes and edit them",
-      "date": "2023-07-11T13:08:30.853Z"
+      "description": "We have an array of notes in my db.json - file. with axios we could get these array, create new notes and put them to the that array, delete notes and edit themdfsssssssssssssssssssssssssssssssssssssssssssssssssssssssssss sssssssssssssssssssssssssssssssssss sssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssss vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvиииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии",
+      "date": "2023-07-12T11:23:24.782Z"
     },
     {
       "id": 6,
       "title": "fourth title",
       "description": "text",
       "date": "2023-07-12T10:03:09.518Z"
+    },
+    {
+      "id": 7,
+      "title": "Another one note",
+      "description": "for mass charachter",
+      "date": "2023-07-12T11:04:15.737Z"
     }
   ]
 }
