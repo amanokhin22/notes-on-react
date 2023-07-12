@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from '../styles/mainWidget.module.scss';
 import {Header} from './Header';
 import {NotesList} from './NotesList';
@@ -67,6 +67,7 @@ export const MainWidget = () => {
                 console.error('Error fetching data:', error);
             }
         };
+
         fetchData();
     }, []);
 
